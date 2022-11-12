@@ -1,0 +1,11 @@
+HomeWork2(first) 11.6.22 - Alon Yaari
+
+1. There is a redundent key, because the customerId could used as a key because it is unique for every costumer.
+    In adittion, In my opinion the name of the costumer should be stored in different table next to his matching id.  
+    Also, There is no need for purchesses, instead a new tbale for items should be created with id of items and his name.
+2.  Insertion anomaly - when inserting new purchese.
+		       For example, the new purchase could be with the same id but with different name.
+3. CREATE TABLE PURCHASES (customerId INTEGER, purchase_id INTEGER, PRIMARY KEY (costumerId, purchase_id)
+    CREATE TABLE COSTUMERS (PRIMARY KEY customerId INTEGER,COSTUMER name TEXT NOT NULL);
+    CREATE TABLE ITEMS (PRIMARY KEY ID INTEGER, name TEXT NOT NULL);
+4. PURCHESSES is a MULTY VALUE ATTRIBUTE, and no need for id in original table.
